@@ -24,6 +24,7 @@ if __name__ == '__main__':
     for file in sys.argv[1:]:
         if os.path.isdir(file):
             for img in os.listdir(file):
+                img = os.path.join(file, img)
                 print_imshape(img)
         else:
             print_imshape(file)
